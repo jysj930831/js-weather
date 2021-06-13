@@ -1,7 +1,7 @@
 const taskInputForm = document.querySelector(".task-input-form");
 const taskInput = taskInputForm.querySelector("input");
 const taskList = document.querySelector(".add-task");
-const finishTask = document.querySelector(".finish-task");
+const taskText = document.querySelector(".task-text");
 
 const TASK_LS = "TASK";
 
@@ -21,19 +21,19 @@ function delBtnFn(event) {
 function toDoTask(addTaskObj) {
   const li = document.createElement("li");
   const span = document.createElement("span");
-  const finBtn = document.createElement("button");
   const delBtn = document.createElement("button");
-  span.innerText = addTaskObj.text;
   li.id = addTaskObj.id;
   delBtn.innerText = "✖";
   delBtn.addEventListener("click", delBtnFn);
-  li.appendChild(span);
+  span.innerText = addTaskObj.text;
   li.appendChild(delBtn);
+  li.appendChild(span);
   taskList.appendChild(li);
 }
 
 function handlesubmit(event) {
   event.preventDefault();
+  taskText.classList.add("none");
   const addTask = taskInput.value;
   taskInput.value = "";
   const addTaskObj = {
@@ -48,6 +48,7 @@ function handlesubmit(event) {
 function loadTask() {
   const loadToDoTask = localStorage.getItem(TASK_LS);
   if (loadToDoTask !== null) {
+    taskText.classList.add("none");
     const parseTask = JSON.parse(loadToDoTask);
     toDoTaskList = parseTask;
     parseTask.forEach(toDoTask);

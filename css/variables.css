@@ -1,6 +1,3 @@
 :root {
-  --yellow: #fae100;
-  --gray: rgba(0, 0, 0, 0.4);
-  --horizontal-space: 25px;
-  --divider-line: 1px solid rgba(0, 0, 0, 0.1);
+  --bgcolor: rgba(0, 0, 0, 0.2);
 }

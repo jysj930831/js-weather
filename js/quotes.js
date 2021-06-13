@@ -1,15 +1,15 @@
 const quotes = [
   {
     quote: "저기압일땐 고기앞으로",
-    author: "배운자",
+    author: "고기학사",
   },
   {
     quote: "늦었다고 생각할때가 진짜 늦은거다",
-    author: "지각생",
+    author: "만년지각생",
   },
   {
     quote: "티끌 모아 티끌",
-    author: "너의텅장",
+    author: "너와나의 통장",
   },
 ];
 
