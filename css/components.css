@@ -1,0 +1,27 @@
+.weather {
+  font-size: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 40px;
+}
+
+.weather__text {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.real-time {
+  margin: 50px 0px;
+  font-size: 150px;
+  justify-content: center;
+  align-items: center;
+}
+
+.quotes {
+  margin: 50px 0px;
+}
+
+li {
+  margin: 15px 0px;
+}

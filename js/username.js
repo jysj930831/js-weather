@@ -1,14 +1,17 @@
-const userNameForm = document.querySelector(".js-userNameForm");
-const currentUserName = document.querySelector(".js-currentUserName");
-
-const USERNAME_LS = "userName";
+const userNameForm = document.querySelector(".user-name-form"),
+  currentUserName = document.querySelector(".current-user-name"),
+  USERNAME_LS = "username";
 
 function saveName(event) {
   event.preventDefault();
   const userName = userNameForm.querySelector("input").value;
-  localStorage.setItem(USERNAME_LS, userName);
-  loadName();
-  userNameForm.classList.add("none");
+  if (userName.replace(/ /gi, "") === "") {
+    currentUserName.innerHTML = "Please write your Name";
+  } else {
+    localStorage.setItem(USERNAME_LS, userName);
+    loadName();
+    userNameForm.classList.add("none");
+  }
 }
 
 function loadName() {

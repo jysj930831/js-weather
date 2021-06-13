@@ -1,3 +1,1 @@
 # js-weather
-
-test
